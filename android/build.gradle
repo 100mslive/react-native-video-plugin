@@ -84,10 +84,6 @@ repositories {
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
 
-def projectRoot = rootProject.projectDir
-
-logger.info('projectRoot: {}', projectRoot)
-
 dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
