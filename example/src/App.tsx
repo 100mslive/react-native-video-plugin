@@ -1,24 +1,10 @@
 import * as React from 'react';
-import { StyleSheet, View, Text, Platform, NativeModules } from 'react-native';
-
-const ReactNativeVideoPlugin = NativeModules.ReactNativeVideoPlugin;
+import { StyleSheet, View, Text } from 'react-native';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    if (Platform.OS === 'ios') {
-      ReactNativeVideoPlugin.multiply(7, 7).then(setResult);
-    }
-  }, []);
-
   return (
     <View style={styles.container}>
-      {Platform.OS === 'ios' ? (
-        <Text>Result: {result}</Text>
-      ) : (
-        <Text>Hello World</Text>
-      )}
+      <Text>Hello World</Text>
     </View>
   );
 }
