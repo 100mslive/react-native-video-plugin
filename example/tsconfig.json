@@ -1,0 +1,8 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {
+    "paths": {
+      "@100mslive/react-native-video-plugin": ["../src"],
+    }
+  }
+}
