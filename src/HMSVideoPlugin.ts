@@ -1,10 +1,12 @@
 import { Platform } from 'react-native';
 import { HMSManagerModule } from '@100mslive/react-native-hms';
 
-import { ReactNativeVideoPluginModule } from './modules/ReactNativeVideoPluginModule';
+import { ReactNativeVideoPlugin } from './modules/ReactNativeVideoPluginModule';
 
 const _nativeModule =
-  Platform.OS === 'android' ? ReactNativeVideoPluginModule : HMSManagerModule;
+  Platform.OS === 'android'
+    ? ReactNativeVideoPlugin.nativeModule
+    : HMSManagerModule;
 
 export class HMSVideoPlugin {
   protected type: string;
