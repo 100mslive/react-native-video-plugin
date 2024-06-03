@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 def sdkVersions = new JsonSlurper().parse file("../sdk-versions.json")
 
 buildscript {
