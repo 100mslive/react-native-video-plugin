@@ -1,3 +1,5 @@
+def sdkVersions = new JsonSlurper().parse file("../sdk-versions.json")
+
 buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
   def kotlin_version = rootProject.ext.has("kotlinVersion") ? rootProject.ext.get("kotlinVersion") : project.properties["ReactNativeVideoPlugin_kotlinVersion"]
@@ -93,7 +95,7 @@ dependencies {
 
   // implementation project(":reactnativehmssdk")
   implementation project(":100mslive_react-native-hms")
-  implementation "live.100ms:virtual-background:2.9.58"
-  implementation "live.100ms:android-sdk:2.9.58"
+  implementation "live.100ms:virtual-background:${sdkVersions["android"]}"
+  implementation "live.100ms:android-sdk:${sdkVersions["android"]}"
 }
 

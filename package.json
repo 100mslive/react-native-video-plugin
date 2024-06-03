@@ -13,6 +13,7 @@
     "android",
     "ios",
     "cpp",
+    "sdk-versions.json",
     "*.podspec",
     "!ios/build",
     "!android/build",
