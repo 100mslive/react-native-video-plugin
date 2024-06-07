@@ -1,6 +1,6 @@
 {
   "name": "@100mslive/react-native-video-plugin",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "test",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -54,7 +54,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@100mslive/react-native-hms": "^1.10.6-beta.0",
+    "@100mslive/react-native-hms": "^1.10.6-beta.1",
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.5.0",
     "@react-native/babel-preset": "^0.73.1",
@@ -80,7 +80,7 @@
     "@types/react": "^18.2.44"
   },
   "peerDependencies": {
-    "@100mslive/react-native-hms": "^1.10.6-beta.0",
+    "@100mslive/react-native-hms": "^1.10.6-beta.1",
     "react": "*",
     "react-native": "*"
   },

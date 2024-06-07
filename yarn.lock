@@ -5,27 +5,15 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@100mslive/react-native-hms@npm:^1.10.5":
-  version: 1.10.5
-  resolution: "@100mslive/react-native-hms@npm:1.10.5"
+"@100mslive/react-native-hms@npm:^1.10.6-beta.1":
+  version: 1.10.6-beta.1
+  resolution: "@100mslive/react-native-hms@npm:1.10.6-beta.1"
   dependencies:
     zustand: ^4.3.8
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 156ec5d1e01233e4451f2f4dd3392b0d7421403a2e291f59e4e7643e3adf185585a2e1b17119ea8ceb43d6240ce98d8eaa2ff55e428887436711b5b544625e1a
-  languageName: node
-  linkType: hard
-
-"@100mslive/react-native-hms@npm:^1.10.6-beta.0":
-  version: 1.10.6-beta.0
-  resolution: "@100mslive/react-native-hms@npm:1.10.6-beta.0"
-  dependencies:
-    zustand: ^4.3.8
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: d093db896f0731703cde02c9c3b6973ef6383c19e41e9ca7f1eb19ac0aa6b70bebe9d68ddf4221b633ff14d19755a3e63456dfb38fc6445e88c341ad718c36ba
+  checksum: b2e4fb2e3cd426715219c146ce200763ac51c7d87bb8501ded5c1e0622100514789d1dc2c09e0b6fde8ffc7ba6fb01f0d3edc0bf1dade46eb4f7442d44da3fe0
   languageName: node
   linkType: hard
 
@@ -33,7 +21,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@100mslive/react-native-video-plugin-example@workspace:example"
   dependencies:
-    "@100mslive/react-native-hms": ^1.10.5
+    "@100mslive/react-native-hms": ^1.10.6-beta.1
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
     "@babel/runtime": ^7.20.0
@@ -64,7 +52,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@100mslive/react-native-video-plugin@workspace:."
   dependencies:
-    "@100mslive/react-native-hms": ^1.10.6-beta.0
+    "@100mslive/react-native-hms": ^1.10.6-beta.1
     "@commitlint/config-conventional": ^17.0.2
     "@evilmartians/lefthook": ^1.5.0
     "@react-native/babel-preset": ^0.73.1
@@ -86,7 +74,7 @@ __metadata:
     turbo: ^1.10.7
     typescript: ^5.2.2
   peerDependencies:
-    "@100mslive/react-native-hms": ^1.10.6-beta.0
+    "@100mslive/react-native-hms": ^1.10.6-beta.1
     react: "*"
     react-native: "*"
   languageName: unknown
