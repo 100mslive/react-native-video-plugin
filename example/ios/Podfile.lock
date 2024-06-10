@@ -81,7 +81,7 @@ PODS:
   - HMSHLSPlayerSDK (0.0.2):
     - HMSAnalyticsSDK (= 0.0.2)
   - HMSNoiseCancellationModels (1.0.0)
-  - HMSSDK (1.10.0):
+  - HMSSDK (1.11.0):
     - HMSAnalyticsSDK (= 0.0.2)
     - HMSWebRTC (= 1.0.6169)
   - HMSWebRTC (1.0.6169)
@@ -338,11 +338,11 @@ PODS:
   - React-jsinspector (0.71.19)
   - React-logger (0.71.19):
     - glog
-  - react-native-hms (1.10.5):
+  - react-native-hms (1.10.6):
     - HMSBroadcastExtensionSDK (= 0.0.9)
     - HMSHLSPlayerSDK (= 0.0.2)
     - HMSNoiseCancellationModels (= 1.0.0)
-    - HMSSDK (= 1.10.0)
+    - HMSSDK (= 1.11.0)
     - React-Core
   - React-perflogger (0.71.19)
   - React-RCTActionSheet (0.71.19):
@@ -613,7 +613,7 @@ SPEC CHECKSUMS:
   HMSBroadcastExtensionSDK: d80fe325f6c928bd8e5176290b5a4b7ae15d6fbb
   HMSHLSPlayerSDK: 6a54ad4d12f3dc2270d1ecd24019d71282a4f6a3
   HMSNoiseCancellationModels: a3bda1405a16015632f4bcabd46ce48f35103b02
-  HMSSDK: fbbdebf673baba7f98f3fa13241b4249929ad681
+  HMSSDK: cdba5b12c080832d135af7bbc4ca6282b0e171ac
   HMSWebRTC: 8f51ba33a0e505e17ebf3d7b37bcdca266751a13
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
@@ -631,7 +631,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: 7263801e44e004967685dd40672bfcedcda00834
   React-jsinspector: e591d9ecb571456fc929ee10409d8847a442d6a7
   React-logger: 70ddbe0e07179c8adb94c4bffc36c6abc952d3d4
-  react-native-hms: 028c8232d459fe2cb25826d4313a8e3d918b503d
+  react-native-hms: 75cca28d8cd59476e22f1fed4809a4aded367786
   React-perflogger: 0ba097528e325435aca94b32b5330f58f6acb6fb
   React-RCTActionSheet: 805b3a83f3dd7ae5a1213ea9df0ed748eeb74b85
   React-RCTAnimation: 2a0233681dee47e468302b8233652b35b68329cb
