@@ -5,7 +5,7 @@ Virtual Background plugin helps in customising one's background that replacing t
 This guide provides an overview of usage of the Virtual Background plugin of 100ms.
 
 <video loop="true" autoplay="autoplay" controls="controls" id="vid" muted height="700" width="300">
-    <source src="" type="video/mp4" />
+    <source src="https://www.100ms.live/docs/guides/virtual-background-ui-demo.mov" type="video/mp4" />
 </video>
 <br />
 
