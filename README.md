@@ -36,7 +36,7 @@ npm install @100mslive/react-native-video-plugin
 
 ### Step 2: Create instance of HMSVirtualBackgroundPlugin
 
-```js{2,6}
+```js
 // Import from `@100mslive/react-native-video-plugin` library
 import { HMSVirtualBackgroundPlugin } from '@100mslive/react-native-video-plugin';
 
@@ -47,7 +47,7 @@ const virtualBackgroundPlugin = new HMSVirtualBackgroundPlugin();
 
 ### Step 3: Create instance of HMSVideoTrackSettings
 
-```js{4}
+```js
 let videoSettings = new HMSVideoTrackSettings({
     initialState: HMSTrackSettingsInitState.MUTED
     // The virtual background plugin to use for the video track. @type {HMSVirtualBackgroundPlugin}
@@ -61,7 +61,7 @@ let trackSettings = new HMSTrackSettings({
 
 ### Step 4: Pass the Track Settings to the HMSSDK
 
-```js{2}
+```js
 const hmsInstance = await HMSSDK.build({
     trackSettings,
 });
