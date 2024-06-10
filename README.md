@@ -4,10 +4,6 @@
 Virtual Background plugin helps in customising one's background that replacing the background with a static image or blurring the background.
 This guide provides an overview of usage of the Virtual Background plugin of 100ms.
 
-[![Virtual Background Demo](https://www.100ms.live/docs/guides/virtual-background-ui-demo.mov)](https://www.100ms.live/docs/guides/virtual-background-ui-demo.mov)
-
-<br />
-
 ## Minimum Requirements
 
 - Minimum [`@100mslive/react-native-hms`](https://github.com/100mslive/100ms-react-native) SDK version is `^1.10.6`
