@@ -1,31 +1,179 @@
 # @100mslive/react-native-video-plugin
 
-test
 
-## Installation
+Virtual Background plugin helps in customising one's background that replacing the background with a static image or blurring the background.
+This guide provides an overview of usage of the Virtual Background plugin of 100ms.
 
-```sh
-npm install @100mslive/react-native-video-plugin
-```
+## Minimum Requirements
+
+- Minimum [`@100mslive/react-native-hms`](https://github.com/100mslive/100ms-react-native) SDK version is `^1.10.6`
+
+
+## Limitations
+
+### Android
+- Has poor FPS on older Android phones
+
+### iOS
+- Minimum iOS version required to support Virtual Background plugin is `iOS 15`
+- Virtual background plugin is in beta stage and may have performance issues on iPhone X, 8, 7, 6 and other older devices. We recommend that you use this feature on a high performance device for smooth experience.
+
 
 ## Usage
 
-```js
-import { multiply } from '@100mslive/react-native-video-plugin';
+### Step 1: Add required dependency
 
-// ...
+Install `@100mslive/react-native-video-plugin` library
 
-const result = await multiply(3, 7);
+```bash
+npm install @100mslive/react-native-video-plugin
 ```
 
-## Contributing
+### Step 2: Create instance of HMSVirtualBackgroundPlugin
 
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
+```js
+// Import from `@100mslive/react-native-video-plugin` library
+import { HMSVirtualBackgroundPlugin } from '@100mslive/react-native-video-plugin';
 
-## License
+...
 
-MIT
+const virtualBackgroundPlugin = new HMSVirtualBackgroundPlugin();
+```
 
----
+### Step 3: Create instance of HMSVideoTrackSettings
 
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+```js
+let videoSettings = new HMSVideoTrackSettings({
+    initialState: HMSTrackSettingsInitState.MUTED
+    // The virtual background plugin to use for the video track. @type {HMSVirtualBackgroundPlugin}
+    videoPlugin: virtualBackgroundPlugin,
+});
+
+let trackSettings = new HMSTrackSettings({
+    video: videoSettings,
+});
+```
+
+### Step 4: Pass the Track Settings to the HMSSDK
+
+```js
+const hmsInstance = await HMSSDK.build({
+    trackSettings,
+});
+```
+
+### Step 5: How to enable and disable virtual background
+
+Hold on to a reference to the instance of HMSVirtualBackgroundPlugin and use `enable` and `disable` methods on it to enable/disable the virtual background.
+
+```js
+const virtualBackgroundPlugin = new HMSVirtualBackgroundPlugin();
+
+...
+
+let isVBEnabled = false;
+
+// Enable VB
+await virtualBackgroundPlugin.enable();
+isVBEnabled = true;
+
+// Disable VB
+await virtualBackgroundPlugin.disable();
+isVBEnabled = false;
+```
+
+> Always call `enable` method after `ON_JOIN` and `ON_PREVIEW` event
+
+> Enabling Virtual Background and applying effect can take some time, you should add a loader in UI.
+
+### Step 6: How to apply Blur as virtual background
+
+Enable the blur background using the `setBlur` method. You should pass blur percentage ranging from 0-100
+
+```js
+const virtualBackgroundPlugin = new HMSVirtualBackgroundPlugin();
+
+...
+// state for tracking if VB is enabled
+let isVBEnabled = false;
+
+// If VB is disabled, first enable it before calling `setBlur` method
+if (isVBEnabled === false) {
+  await virtualBackgroundPlugin.enable();
+  isVBEnabled = true;
+}
+
+await virtualBackgroundPlugin.setBlur(100);
+```
+
+> You should only call `setBlur` method only after enabling the virtual background
+
+### Step 7: How to apply Image as virtual background
+
+Enable the background image using the `setBackground` method. It accepts image source (either a object with height, width and uri properties or a static image file).
+
+Here is how to use a static image file -
+
+```js
+const virtualBackgroundPlugin = new HMSVirtualBackgroundPlugin();
+
+...
+// state for tracking if VB is enabled
+let isVBEnabled = false;
+
+// If VB is disabled, first enable it before calling `setBlur` method
+if (isVBEnabled === false) {
+  await virtualBackgroundPlugin.enable();
+  isVBEnabled = true;
+}
+
+const image = require('<PATH_TO_IMAGE_HERE>'); // ex: require('../assets/VB-1.jpg')
+await virtualBackgroundPlugin.setBackground(image);
+```
+
+Here is how to use remote image file, `setBackground` method accepts object of following type -
+
+```js
+export interface ImageURISource {
+  width: number;
+
+  height: number;
+
+  /**
+   * `uri` is a string representing the resource identifier for the image, which
+   * could be an http address, a local file path, or the name of a static image
+   * resource (which should be wrapped in the `require('./path/to/image.png')`
+   * function).
+   */
+  uri:
+}
+
+...
+
+await virtualBackgroundPlugin.setBackground({
+  width,
+  height,
+  uri: 'file://...', // path of image stored in device
+});
+```
+
+Using library like [react-native-image-picker](https://www.npmjs.com/package/react-native-image-picker) -
+
+```js
+import { launchImageLibrary } from 'react-native-image-picker';
+
+...
+
+// You can use result from library like `react-native-image-picker` to use images from photo library
+const result = await launchImageLibrary({ mediaType: 'photo', selectionLimit: 1 });
+
+// getting first image
+const imageObject = response.assets?.[0];
+
+// If image is selected, use it as background
+if (imageObject) {
+  await virtualBackgroundPlugin.setBackground(imageObject);
+}
+```
+
+> You should only call `setBackground` method only after enabling the virtual background

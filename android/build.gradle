@@ -1,3 +1,7 @@
+import groovy.json.JsonSlurper
+
+def sdkVersions = new JsonSlurper().parse file("../sdk-versions.json")
+
 buildscript {
   // Buildscript is evaluated before everything else so we can't use getExtOrDefault
   def kotlin_version = rootProject.ext.has("kotlinVersion") ? rootProject.ext.get("kotlinVersion") : project.properties["ReactNativeVideoPlugin_kotlinVersion"]
@@ -84,10 +88,6 @@ repositories {
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
 
-def projectRoot = rootProject.projectDir
-
-logger.info('projectRoot: {}', projectRoot)
-
 dependencies {
   // For < 0.71, this will be from the local maven repo
   // For > 0.71, this will be replaced by `com.facebook.react:react-android:$version` by react gradle plugin
@@ -97,7 +97,7 @@ dependencies {
 
   // implementation project(":reactnativehmssdk")
   implementation project(":100mslive_react-native-hms")
-  implementation "live.100ms:virtual-background:2.9.58"
-  implementation "live.100ms:android-sdk:2.9.58"
+  implementation "live.100ms:virtual-background:${sdkVersions["android"]}"
+  implementation "live.100ms:android-sdk:${sdkVersions["android"]}"
 }
 

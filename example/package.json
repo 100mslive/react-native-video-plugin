@@ -1,6 +1,6 @@
 {
   "name": "@100mslive/react-native-video-plugin-example",
-  "version": "0.0.1",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -10,7 +10,7 @@
     "build:ios": "cd ios && xcodebuild -workspace ReactNativeVideoPluginExample.xcworkspace -scheme ReactNativeVideoPluginExample -configuration Debug -sdk iphonesimulator CC=clang CPLUSPLUS=clang++ LD=clang LDPLUSPLUS=clang++ GCC_OPTIMIZATION_LEVEL=0 GCC_PRECOMPILE_PREFIX_HEADER=YES ASSETCATALOG_COMPILER_OPTIMIZATION=time DEBUG_INFORMATION_FORMAT=dwarf COMPILER_INDEX_STORE_ENABLE=NO"
   },
   "dependencies": {
-    "@100mslive/react-native-hms": "^1.10.5",
+    "@100mslive/react-native-hms": "^1.10.6",
     "react": "18.2.0",
     "react-native": "0.71.19"
   },
