@@ -106,18 +106,21 @@
     "enhancement",
     "snapchat",
     "zoom",
-    "teams"
+    "teams",
+    "ai",
+    "noise",
+    "cancellation"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/100mslive/react-native-hms.git"
+    "url": "git+https://github.com/100mslive/react-native-video-plugin.git"
   },
   "author": "Jatin Nagar <jatin.nagar@100ms.live> (https://www.100ms.live/), Yogesh <yogesh@100ms.live> (https://www.100ms.live/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/100mslive/react-native-hms/issues"
+    "url": "https://github.com/100mslive/react-native-video-plugin/issues"
   },
-  "homepage": "https://github.com/100mslive/react-native-hms#readme",
+  "homepage": "https://github.com/100mslive/react-native-video-plugin#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },
