@@ -50,6 +50,7 @@ __metadata:
   dependencies:
     "@100mslive/react-native-hms": ^1.10.7
     "@100mslive/react-native-room-kit": ^1.2.0
+    "@100mslive/react-native-video-plugin": "workspace:^"
     "@100mslive/types-prebuilt": ^0.12.9
     "@babel/core": ^7.20.0
     "@babel/preset-env": ^7.20.0
@@ -78,6 +79,7 @@ __metadata:
     react: 18.2.0
     react-native: 0.71.19
     react-native-gesture-handler: ^2.17.1
+    react-native-image-picker: ^7.1.2
     react-native-linear-gradient: ^2.8.3
     react-native-modal: ^13.0.1
     react-native-permissions: ^4.1.5
@@ -91,7 +93,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@100mslive/react-native-video-plugin@workspace:.":
+"@100mslive/react-native-video-plugin@workspace:., @100mslive/react-native-video-plugin@workspace:^":
   version: 0.0.0-use.local
   resolution: "@100mslive/react-native-video-plugin@workspace:."
   dependencies:
@@ -10055,6 +10057,16 @@ __metadata:
   version: 0.71.19
   resolution: "react-native-gradle-plugin@npm:0.71.19"
   checksum: 2e3ab679f0b81edd81b9fb88a73a16c8b9b6dbef4e7158fd894c42e6dff04ba8d11f1b9663ffa2c30d0d9deee3cd44b033cd280322c010be3c290e4422088a7a
+  languageName: node
+  linkType: hard
+
+"react-native-image-picker@npm:^7.1.2":
+  version: 7.1.2
+  resolution: "react-native-image-picker@npm:7.1.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: af52328b7cb06c28549442f0d923cfa92dde8d5a968a642336df4c882f81adbf0e5e606a14de27f96883a76fa1e03230061c4080011c9107942edebc8e09c478
   languageName: node
   linkType: hard
 
