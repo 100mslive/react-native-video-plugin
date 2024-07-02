@@ -55,7 +55,7 @@ const App = () => {
 
           {showHMSPrebuilt ? (
             <HMSPrebuilt
-              roomCode={"bdk-qfpr-qlz"}
+              roomCode={"bdk-qfpr-qlz"} // Room Link: https://yogesh1-videoconf-1516.app.100ms.live/meeting/bdk-qfpr-qlz
               options={{ userName: "John Appleseed" }}
               onLeave={handleRoomLeave}
             />
