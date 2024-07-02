@@ -458,6 +458,10 @@ PODS:
     - RCT-Folly (= 2021.07.22.00)
     - React-Core
     - ReactCommon/turbomodule/core
+  - RNScreens (3.32.0):
+    - RCT-Folly (= 2021.07.22.00)
+    - React-Core
+    - React-RCTImage
   - SocketRocket (0.6.1)
   - Toast (4.1.1)
   - Yoga (1.14.0)
@@ -535,6 +539,7 @@ DEPENDENCIES:
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNPermissions (from `../node_modules/react-native-permissions`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
+  - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
 
 SPEC REPOS:
@@ -654,6 +659,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native-permissions"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
+  RNScreens:
+    :path: "../node_modules/react-native-screens"
   Yoga:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
@@ -721,13 +728,14 @@ SPEC CHECKSUMS:
   RNCMaskedView: 090213d32d8b3bb83a4dcb7d12c18f0152591906
   RNFlashList: b521ebdd7f9352673817f1d98e8bdc0c8cf8545b
   RNGestureHandler: bbb8e17b10afdafc5cc5746e8f60772236e7e2ca
-  RNPermissions: 294531ede5a64d1528463e88fffef05675842042
+  RNPermissions: f61ebf52bb670809d522bba0b09b3e6a9ea5ab7e
   RNReanimated: dee707f6ec46a6895aa9e02012665f94ff1f6b55
+  RNScreens: 0bd9eec783bed1032e02a4db9976dae1664a5c7b
   SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
   Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
   Yoga: d4f5b037672e6b68ba484c7cf7fe6790122df792
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: f05116ad22688531294e1fe3fbc828a2a1fa005f
+PODFILE CHECKSUM: 451a15506af44081a05eaf8ed2ac8f6da4382f33
 
 COCOAPODS: 1.15.2
