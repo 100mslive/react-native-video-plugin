@@ -1,22 +1,29 @@
 # @100mslive/react-native-video-plugin
 
+[![npm](https://img.shields.io/npm/v/@100mslive/react-native-video-plugin)](https://www.npmjs.com/package/@100mslive/react-native-video-plugin)
+[![Build](https://github.com/100mslive/100ms-react-native/actions/workflows/build.yml/badge.svg?branch=develop)](https://github.com/100mslive/100ms-react-native/actions/workflows/build.yml)
+[![license](https://img.shields.io/npm/l/@100mslive/react-native-hms)](https://www.100ms.live/)
+[![quality](https://img.shields.io/npms-io/quality-score/@100mslive/react-native-hms)](https://www.npmjs.com/package/@100mslive/react-native-hms)
+[![collaborators](https://img.shields.io/npm/collaborators/@100mslive/react-native-hms)](https://www.npmjs.com/package/@100mslive/react-native-hms)
+[![Documentation](https://img.shields.io/badge/Read-Documentation-blue)](https://docs.100ms.live/react-native/v2/foundation/basics)
+[![Discord](https://img.shields.io/discord/843749923060711464?label=Join%20on%20Discord)](https://100ms.live/discord)
+[![Firebase](https://img.shields.io/badge/Download%20Android-Firebase-green)](https://appdistribution.firebase.dev/i/7b7ab3b30e627c35)
+[![TestFlight](https://img.shields.io/badge/Download%20iOS-TestFlight-blue)](https://testflight.apple.com/join/v4bSIPad)
+[![Activity](https://img.shields.io/github/commit-activity/m/100mslive/react-native-hms.svg)](https://github.com/100mslive/100ms-react-native/projects?type=classic)
+[![Register](https://img.shields.io/badge/Contact-Know%20More-blue)](https://dashboard.100ms.live/register)
+
 <p align="center" width="100%">
 <img alt="Prebuilt - VB" src="https://github.com/100mslive/flutter-video-plugin/assets/93931528/b85b5f48-b06c-4b11-b3d6-8639f8cbd1c3">
 </p>
 
-Integrate virtual backgrounds, blur backgrounds effects in your Flutter app with the 100ms Video Plugin. 100ms video plugin enabled adding virtual backgrounds, blur backgrounds, and other video filters to your 100ms video conferencing app. The plugin is built on top of the 100ms Flutter SDK.
+Integrate virtual backgrounds, blur backgrounds effects in your React Native app with the 100ms Video Plugin. 100ms video plugin enabled adding virtual backgrounds, blur backgrounds, and other video filters to your 100ms video conferencing app. The plugin is built on top of the 100ms React Native SDK.
 
-📖 Read the Complete Documentation here: https://www.100ms.live/docs/flutter/v2/guides/quickstart
+📖 Read the Complete Documentation here: https://www.100ms.live/docs/react-native/v2/quickstart/quickstart
 
-📲 Download the Sample iOS app here: <https://testflight.apple.com/join/Uhzebmut>
+📲 Download the Example iOS app here: https://testflight.apple.com/join/v4bSIPad
 
-🤖 Download the Sample Android app here: <https://appdistribution.firebase.dev/i/b623e5310929ab70>
+🤖 Download the Example Android app here: https://appdistribution.firebase.dev/i/7b7ab3b30e627c35
 
-100ms Flutter apps are also released on the App Stores, you can download them here:
-
-📲 iOS app on Apple App Store: <https://apps.apple.com/app/100ms-live/id1576541989>
-
-🤖 Android app on Google Play Store: <https://play.google.com/store/apps/details?id=live.hms.flutter>
 
 <div align="center">
   <video src="https://github.com/100mslive/flutter-video-plugin/assets/93931528/c44c4501-dd70-4d92-a23d-06fee1872278" controls >
