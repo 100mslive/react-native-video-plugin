@@ -33,12 +33,12 @@ Integrate virtual backgrounds, blur backgrounds effects in your React Native app
 Virtual Background plugin helps in customising one's background that replacing the background with a static image or blurring the background.
 This guide provides an overview of usage of the Virtual Background plugin of 100ms.
 
+| Package                          | Version                                                                                                                                 |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| @100mslive/react-native-room-kit | [![npm](https://img.shields.io/npm/v/@100mslive/react-native-room-kit)](https://www.npmjs.com/package/@100mslive/react-native-room-kit) |
+| @100mslive/react-native-hms      | [![npm](https://img.shields.io/npm/v/@100mslive/react-native-hms)](https://www.npmjs.com/package/@100mslive/react-native-hms)           |
+| @100mslive/react-native-video-plugin      | [![npm](https://img.shields.io/npm/v/@100mslive/react-native-video-plugin)](https://www.npmjs.com/package/@100mslive/react-native-video-plugin)  |
 
-| Package        | Version                                                                                                |
-| -------------- | ------------------------------------------------------------------------------------------------------ |
-| hms_room_kit   | [![Pub Version](https://img.shields.io/pub/v/hms_room_kit)](https://pub.dev/packages/hms_room_kit)     |
-| hmssdk_flutter | [![Pub Version](https://img.shields.io/pub/v/hmssdk_flutter)](https://pub.dev/packages/hmssdk_flutter) |
-| hms_video_plugin | [![Pub Version](https://img.shields.io/pub/v/hms_video_plugin)](https://pub.dev/packages/hms_video_plugin) |
 
 ## Minimum Requirements
 
