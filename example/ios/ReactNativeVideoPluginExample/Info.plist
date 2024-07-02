@@ -35,6 +35,16 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIBackgroundModes</key>
+    <array>
+      <string>audio</string>
+    </array>
+	<key>NSCameraUsageDescription</key>
+  <string>Please allow access to Camera to enable video conferencing</string>
+  <key>NSMicrophoneUsageDescription</key>
+  <string>Please allow access to Microphone to enable video conferencing</string>
+  <key>NSLocalNetworkUsageDescription</key>
+  <string>Please allow access to network usage to enable video conferencing</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string></string>
 	<key>UILaunchStoryboardName</key>
