@@ -13,6 +13,15 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9B8BF5B7574473DFF0A565B0 /* libPods-ReactNativeVideoPluginExample-ReactNativeVideoPluginExampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B9803ACDC2701F874FC1C83 /* libPods-ReactNativeVideoPluginExample-ReactNativeVideoPluginExampleTests.a */; };
+		EC5BBBBD2C340C6C004F63BE /* Inter-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBBB42C340C6B004F63BE /* Inter-Thin.ttf */; };
+		EC5BBBBE2C340C6C004F63BE /* Inter-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBBB52C340C6B004F63BE /* Inter-Bold.ttf */; };
+		EC5BBBBF2C340C6C004F63BE /* Inter-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBBB62C340C6B004F63BE /* Inter-ExtraLight.ttf */; };
+		EC5BBBC02C340C6C004F63BE /* Inter-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBBB72C340C6B004F63BE /* Inter-Light.ttf */; };
+		EC5BBBC12C340C6C004F63BE /* Inter-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBBB82C340C6B004F63BE /* Inter-Medium.ttf */; };
+		EC5BBBC22C340C6C004F63BE /* Inter-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBBB92C340C6B004F63BE /* Inter-ExtraBold.ttf */; };
+		EC5BBBC32C340C6C004F63BE /* Inter-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBBBA2C340C6B004F63BE /* Inter-Black.ttf */; };
+		EC5BBBC42C340C6C004F63BE /* Inter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBBBB2C340C6C004F63BE /* Inter-Regular.ttf */; };
+		EC5BBBC52C340C6C004F63BE /* Inter-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC5BBBBC2C340C6C004F63BE /* Inter-SemiBold.ttf */; };
 		F513AEDA3C371E5DDE28FFB9 /* libPods-ReactNativeVideoPluginExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF09FEE11184335B5C57FCB /* libPods-ReactNativeVideoPluginExample.a */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +53,15 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeVideoPluginExample/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD42C8902BDBCB100036610F /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ReactNativeVideoPluginExample/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		E4CEC37841A7C3F0B786120F /* Pods-ReactNativeVideoPluginExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeVideoPluginExample.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeVideoPluginExample/Pods-ReactNativeVideoPluginExample.debug.xcconfig"; sourceTree = "<group>"; };
+		EC5BBBB42C340C6B004F63BE /* Inter-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Thin.ttf"; sourceTree = "<group>"; };
+		EC5BBBB52C340C6B004F63BE /* Inter-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold.ttf"; sourceTree = "<group>"; };
+		EC5BBBB62C340C6B004F63BE /* Inter-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight.ttf"; sourceTree = "<group>"; };
+		EC5BBBB72C340C6B004F63BE /* Inter-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Light.ttf"; sourceTree = "<group>"; };
+		EC5BBBB82C340C6B004F63BE /* Inter-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium.ttf"; sourceTree = "<group>"; };
+		EC5BBBB92C340C6B004F63BE /* Inter-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraBold.ttf"; sourceTree = "<group>"; };
+		EC5BBBBA2C340C6B004F63BE /* Inter-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Black.ttf"; sourceTree = "<group>"; };
+		EC5BBBBB2C340C6C004F63BE /* Inter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Regular.ttf"; sourceTree = "<group>"; };
+		EC5BBBBC2C340C6C004F63BE /* Inter-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-SemiBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -87,6 +105,7 @@
 		13B07FAE1A68108700A75B9A /* ReactNativeVideoPluginExample */ = {
 			isa = PBXGroup;
 			children = (
+				EC5BBBB32C340C4F004F63BE /* Resources */,
 				CD42C8902BDBCB100036610F /* PrivacyInfo.xcprivacy */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
@@ -148,6 +167,22 @@
 				5C2049CEFA8030D525014FC5 /* Pods-ReactNativeVideoPluginExample-ReactNativeVideoPluginExampleTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		EC5BBBB32C340C4F004F63BE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EC5BBBBA2C340C6B004F63BE /* Inter-Black.ttf */,
+				EC5BBBB52C340C6B004F63BE /* Inter-Bold.ttf */,
+				EC5BBBB92C340C6B004F63BE /* Inter-ExtraBold.ttf */,
+				EC5BBBB62C340C6B004F63BE /* Inter-ExtraLight.ttf */,
+				EC5BBBB72C340C6B004F63BE /* Inter-Light.ttf */,
+				EC5BBBB82C340C6B004F63BE /* Inter-Medium.ttf */,
+				EC5BBBBB2C340C6C004F63BE /* Inter-Regular.ttf */,
+				EC5BBBBC2C340C6C004F63BE /* Inter-SemiBold.ttf */,
+				EC5BBBB42C340C6B004F63BE /* Inter-Thin.ttf */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -245,7 +280,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				EC5BBBC32C340C6C004F63BE /* Inter-Black.ttf in Resources */,
+				EC5BBBBF2C340C6C004F63BE /* Inter-ExtraLight.ttf in Resources */,
+				EC5BBBC52C340C6C004F63BE /* Inter-SemiBold.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				EC5BBBC22C340C6C004F63BE /* Inter-ExtraBold.ttf in Resources */,
+				EC5BBBBE2C340C6C004F63BE /* Inter-Bold.ttf in Resources */,
+				EC5BBBC42C340C6C004F63BE /* Inter-Regular.ttf in Resources */,
+				EC5BBBC12C340C6C004F63BE /* Inter-Medium.ttf in Resources */,
+				EC5BBBC02C340C6C004F63BE /* Inter-Light.ttf in Resources */,
+				EC5BBBBD2C340C6C004F63BE /* Inter-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
