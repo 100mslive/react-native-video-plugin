@@ -3,6 +3,7 @@ package com.hms.reactnativevideoplugin
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
+import android.util.Log
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
 import com.facebook.react.bridge.ReactContextBaseJavaModule
@@ -161,17 +162,27 @@ class ReactNativeVideoPluginModule(reactContext: ReactApplicationContext) :
       val addPluginListener =
         object : HMSActionResultListener {
           override fun onError(error: HMSException) {
+            Log.e("ReactNativeVideoPluginModule", "enableVideoPlugin: HMSVirtualBackgroundPlugin error: ${error.message}")
             promise?.reject(error.code.toString(), error.message)
           }
 
           override fun onSuccess() {
+            Log.d("ReactNativeVideoPluginModule", "enableVideoPlugin: HMSVirtualBackgroundPlugin success")
+            Log.d("ReactNativeVideoPluginModule", "enableVideoPlugin: will enableBlur")
+            virtualBackgroundPlugin?.enableBlur(75)
             promise?.resolve(true)
           }
         }
 
+      Log.d("ReactNativeVideoPluginModule", "enableVideoPlugin: HMSVirtualBackgroundPlugin")
+      Log.d("ReactNativeVideoPluginModule", "promise.toString: ${promise.toString()}")
+
+
       virtualBackgroundPlugin?.let {
+        Log.d("ReactNativeVideoPluginModule", "virtualBackgroundPlugin is not null")
         hmsSDK.addPlugin(it, addPluginListener)
       } ?: run {
+        Log.d("ReactNativeVideoPluginModule", "virtualBackgroundPlugin is null")
         HMSVirtualBackground(hmsSDK).apply {
           enableBlur(75)
           virtualBackgroundPlugin = this
