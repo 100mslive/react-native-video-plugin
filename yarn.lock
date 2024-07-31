@@ -5,28 +5,28 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@100mslive/react-native-hms@npm:^1.10.7":
-  version: 1.10.7
-  resolution: "@100mslive/react-native-hms@npm:1.10.7"
+"@100mslive/react-native-hms@npm:^1.10.9":
+  version: 1.10.9
+  resolution: "@100mslive/react-native-hms@npm:1.10.9"
   dependencies:
     zustand: ^4.3.8
   peerDependencies:
     react: "*"
     react-native: "*"
-  checksum: 9386801bdb440baf5f40cc47a1891fd27460485f88a88a8018c45a52d162100e85a48a0f27edaf5fd82dc130435163441a21b1cc39a547bc885b3a642404723e
+  checksum: 75b1877c6c29933e0d28f809f4cb2445fc50b1f5d2c3b0b1bc60c7ec4e93374fd3d57517344c606ad1b6a9d2900792e2d387fcb4fc43e0d1e116907aac0c9a52
   languageName: node
   linkType: hard
 
-"@100mslive/react-native-room-kit@npm:^1.2.0":
-  version: 1.2.0
-  resolution: "@100mslive/react-native-room-kit@npm:1.2.0"
+"@100mslive/react-native-room-kit@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "@100mslive/react-native-room-kit@npm:1.2.2"
   dependencies:
-    "@100mslive/types-prebuilt": ^0.12.8
+    "@100mslive/types-prebuilt": ^0.12.9
     "@react-navigation/native": ^6.0.8
     react-redux: ^7.2.4
     redux: ^4.1.0
   peerDependencies:
-    "@100mslive/react-native-hms": 1.10.7
+    "@100mslive/react-native-hms": 1.10.9
     "@react-native-community/blur": ^4.3.2
     "@react-native-masked-view/masked-view": ^0.2.9
     "@shopify/flash-list": ^1.4.3
@@ -40,7 +40,7 @@ __metadata:
     react-native-safe-area-context: ^3.3.0
     react-native-simple-toast: ^1.1.3
     react-native-webview: ^13.8.7
-  checksum: 5eeec8bbf1de53c3d8e3e0239c4b034e981a4963bf886702ca6f60c5e3bd8bf660a1cc525e9ee13e0c97f89620c73968fc07e25ff025344b70c8795ddb8a18e9
+  checksum: 40e77992f86e42ad37b0f34006b035afeea234273b198b47b317d003343e5d723806108b5737cdbba852dd21e66df0824f7bf88c07c1fa49772c8aceb659ba64
   languageName: node
   linkType: hard
 
@@ -48,8 +48,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@100mslive/react-native-video-plugin-example@workspace:example"
   dependencies:
-    "@100mslive/react-native-hms": ^1.10.7
-    "@100mslive/react-native-room-kit": ^1.2.0
+    "@100mslive/react-native-hms": ^1.10.9
+    "@100mslive/react-native-room-kit": ^1.2.2
     "@100mslive/react-native-video-plugin": "workspace:^"
     "@100mslive/types-prebuilt": ^0.12.9
     "@babel/core": ^7.20.0
@@ -97,7 +97,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@100mslive/react-native-video-plugin@workspace:."
   dependencies:
-    "@100mslive/react-native-hms": ^1.10.7
+    "@100mslive/react-native-hms": ^1.10.9
     "@commitlint/config-conventional": ^17.0.2
     "@evilmartians/lefthook": ^1.5.0
     "@react-native/babel-preset": ^0.73.1
@@ -117,13 +117,13 @@ __metadata:
     turbo: ^1.10.7
     typescript: ^5.2.2
   peerDependencies:
-    "@100mslive/react-native-hms": ^1.10.6
+    "@100mslive/react-native-hms": ^1.10.9
     react: "*"
     react-native: "*"
   languageName: unknown
   linkType: soft
 
-"@100mslive/types-prebuilt@npm:^0.12.8, @100mslive/types-prebuilt@npm:^0.12.9":
+"@100mslive/types-prebuilt@npm:^0.12.9":
   version: 0.12.9
   resolution: "@100mslive/types-prebuilt@npm:0.12.9"
   checksum: 5fd860ce7ffeaefd723b49fa81243fa9d57b893b434c8ef08f6324f4d88e4ab8569d8ea29f67cf1f56b2e80768b74f96be731594346727d9dec304edcbfe6567

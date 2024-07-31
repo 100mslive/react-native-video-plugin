@@ -1,6 +1,6 @@
 {
   "name": "@100mslive/react-native-video-plugin",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "HMSSDK now provides support for Virtual Background using @100mslive/react-native-video-plugin. It allows users to change their background during a call. Users can choose from a variety of backgrounds or upload their own custom background. It also provides a feature to blur the background.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -124,7 +124,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@100mslive/react-native-hms": "^1.10.7",
+    "@100mslive/react-native-hms": "^1.10.9",
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.5.0",
     "@react-native/babel-preset": "^0.73.1",
@@ -148,7 +148,7 @@
     "@types/react": "^18.2.44"
   },
   "peerDependencies": {
-    "@100mslive/react-native-hms": "^1.10.6",
+    "@100mslive/react-native-hms": "^1.10.9",
     "react": "*",
     "react-native": "*"
   },

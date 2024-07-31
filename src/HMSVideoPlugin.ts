@@ -29,7 +29,7 @@ export class HMSVideoPlugin {
       console.log('#Function HMSVirtualBackgroundPlugin#enable', data);
 
     try {
-      return this.nativeModule.enableVideoPlugin(data);
+      return await this.nativeModule.enableVideoPlugin(data);
     } catch (e) {
       if (__DEV__)
         console.warn(
@@ -50,7 +50,7 @@ export class HMSVideoPlugin {
       console.log('#Function HMSVirtualBackgroundPlugin#disable', data);
 
     try {
-      return this.nativeModule.disableVideoPlugin(data);
+      return await this.nativeModule.disableVideoPlugin(data);
     } catch (e) {
       if (__DEV__)
         console.warn(
