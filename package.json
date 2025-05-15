@@ -145,7 +145,8 @@
     "typescript": "^5.2.2"
   },
   "resolutions": {
-    "@types/react": "^18.2.44"
+    "@types/react": "^18.2.44",
+    "image-size": "2.0.2"
   },
   "peerDependencies": {
     "@100mslive/react-native-hms": "^1.10.9",
