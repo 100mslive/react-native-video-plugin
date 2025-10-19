@@ -114,7 +114,7 @@
     "type": "git",
     "url": "git+https://github.com/100mslive/react-native-video-plugin.git"
   },
-  "author": "Jatin Nagar <jatin.nagar@100ms.live> (https://www.100ms.live/), Yogesh <yogesh@100ms.live> (https://www.100ms.live/)",
+  "author": "Yogesh Singh (https://www.100ms.live/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/100mslive/react-native-video-plugin/issues"
