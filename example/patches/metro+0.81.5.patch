@@ -1,0 +1,13 @@
+diff --git a/node_modules/metro/src/Assets.js b/node_modules/metro/src/Assets.js
+index 1234567..abcdefg 100644
+--- a/node_modules/metro/src/Assets.js
++++ b/node_modules/metro/src/Assets.js
+@@ -3,7 +3,7 @@
+ const AssetPaths = require("./node-haste/lib/AssetPaths");
+ const crypto = require("crypto");
+ const fs = require("fs");
+-const getImageSize = require("image-size");
++const { imageSize: getImageSize } = require("image-size");
+ const path = require("path");
+ function isAssetTypeAnImage(type) {
+   return (
