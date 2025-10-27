@@ -57,8 +57,26 @@ export class HMSVirtualBackgroundPlugin extends HMSVideoPlugin {
 
 function resolveBackground(background: ImageURISource | ImageRequireSource): {
   type: 'image';
-  source: ImageResolvedAssetSource;
+  source: ImageResolvedAssetSource | ImageURISource;
 } {
+  // Check if it's a remote URL with dimensions already provided
+  if (
+    typeof background === 'object' &&
+    'uri' in background &&
+    background.uri &&
+    (background.uri.startsWith('http://') || background.uri.startsWith('https://')) &&
+    background.width &&
+    background.height
+  ) {
+    // For remote URLs with dimensions, pass them through directly
+    // Don't use Image.resolveAssetSource() as it doesn't handle remote URLs properly
+    return {
+      type: 'image',
+      source: background as ImageURISource,
+    };
+  }
+
+  // For bundled assets (require()) or local file:// URLs, use resolveAssetSource
   return {
     type: 'image',
     source: Image.resolveAssetSource(background),
