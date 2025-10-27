@@ -11,8 +11,8 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@100mslive/react-native-hms": "portal:/Users/yogesh/Programming/100ms-react-native/packages/react-native-hms",
-    "@100mslive/react-native-room-kit": "portal:/Users/yogesh/Programming/100ms-react-native/packages/react-native-room-kit",
+    "@100mslive/react-native-hms": "1.11.0",
+    "@100mslive/react-native-room-kit": "1.2.3",
     "@100mslive/react-native-video-plugin": "workspace:^",
     "@100mslive/types-prebuilt": "^0.12.12",
     "@react-native-community/blur": "^4.4.1",
