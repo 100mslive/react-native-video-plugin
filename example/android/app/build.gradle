@@ -1,5 +1,8 @@
-apply plugin: "com.android.application"
-apply plugin: "com.facebook.react"
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+    id("com.facebook.react")
+}
 
 import com.android.build.OutputFile
 
@@ -8,48 +11,51 @@ import com.android.build.OutputFile
  * By default you don't need to apply any configuration, just uncomment the lines you need.
  */
 react {
-    /* Folders */
-    //   The root of your project, i.e. where "package.json" lives. Default is '..'
-    // root = file("../")
-    //   The folder where the react-native NPM package is. Default is ../node_modules/react-native
-    // reactNativeDir = file("../node_modules/react-native")
-    //   The folder where the react-native Codegen package is. Default is ../node_modules/react-native-codegen
-    // codegenDir = file("../node_modules/react-native-codegen")
-    //   The cli.js file which is the React Native CLI entrypoint. Default is ../node_modules/react-native/cli.js
-    // cliFile = file("../node_modules/react-native/cli.js")
+  // Needed to enable Autolinking
+  autolinkLibrariesWithApp()
 
-    /* Variants */
-    //   The list of variants to that are debuggable. For those we're going to
-    //   skip the bundling of the JS bundle and the assets. By default is just 'debug'.
-    //   If you add flavors like lite, prod, etc. you'll have to list your debuggableVariants.
-    // debuggableVariants = ["liteDebug", "prodDebug"]
+  /* Folders */
+  //   The root of your project, i.e. where "package.json" lives. Default is '..'
+  // root = file("../")
+  //   The folder where the react-native NPM package is. Default is ../node_modules/react-native
+  // reactNativeDir = file("../node_modules/react-native")
+  //   The folder where the react-native Codegen package is. Default is ../node_modules/react-native-codegen
+  // codegenDir = file("../node_modules/react-native-codegen")
+  //   The cli.js file which is the React Native CLI entrypoint. Default is ../node_modules/react-native/cli.js
+  // cliFile = file("../node_modules/react-native/cli.js")
 
-    /* Bundling */
-    //   A list containing the node command and its flags. Default is just 'node'.
-    // nodeExecutableAndArgs = ["node"]
-    //
-    //   The command to run when bundling. By default is 'bundle'
-    // bundleCommand = "ram-bundle"
-    //
-    //   The path to the CLI configuration file. Default is empty.
-    // bundleConfig = file(../rn-cli.config.js)
-    //
-    //   The name of the generated asset file containing your JS bundle
-    // bundleAssetName = "MyApplication.android.bundle"
-    //
-    //   The entry file for bundle generation. Default is 'index.android.js' or 'index.js'
-    // entryFile = file("../js/MyApplication.android.js")
-    //
-    //   A list of extra flags to pass to the 'bundle' commands.
-    //   See https://github.com/react-native-community/cli/blob/main/docs/commands.md#bundle
-    // extraPackagerArgs = []
+  /* Variants */
+  //   The list of variants to that are debuggable. For those we're going to
+  //   skip the bundling of the JS bundle and the assets. By default is just 'debug'.
+  //   If you add flavors like lite, prod, etc. you'll have to list your debuggableVariants.
+  // debuggableVariants = ["liteDebug", "prodDebug"]
 
-    /* Hermes Commands */
-    //   The hermes compiler command to run. By default it is 'hermesc'
-    // hermesCommand = "$rootDir/my-custom-hermesc/bin/hermesc"
-    //
-    //   The list of flags to pass to the Hermes compiler. By default is "-O", "-output-source-map"
-    // hermesFlags = ["-O", "-output-source-map"]
+  /* Bundling */
+  //   A list containing the node command and its flags. Default is just 'node'.
+  // nodeExecutableAndArgs = ["/usr/local/bin/node"]
+  //
+  //   The command to run when bundling. By default is 'bundle'
+  // bundleCommand = "ram-bundle"
+  //
+  //   The path to the CLI configuration file. Default is empty.
+  // bundleConfig = file(../rn-cli.config.js)
+  //
+  //   The name of the generated asset file containing your JS bundle
+  // bundleAssetName = "MyApplication.android.bundle"
+  //
+  //   The entry file for bundle generation. Default is 'index.android.js' or 'index.js'
+  // entryFile = file("../js/MyApplication.android.js")
+  //
+  //   A list of extra flags to pass to the 'bundle' commands.
+  //   See https://github.com/react-native-community/cli/blob/main/docs/commands.md#bundle
+  // extraPackagerArgs = []
+
+  /* Hermes Commands */
+  //   The hermes compiler command to run. By default it is 'hermesc'
+  // hermesCommand = "$rootDir/my-custom-hermesc/bin/hermesc"
+  //
+  //   The list of flags to pass to the Hermes compiler. By default is "-O", "-output-source-map"
+  // hermesFlags = ["-O", "-output-source-map"]
 }
 
 /**
@@ -85,13 +91,22 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  */
 def reactNativeArchitectures() {
     def value = project.getProperties().get("reactNativeArchitectures")
-    return value ? value.split(",") : ["armeabi-v7a", "x86", "x86_64", "arm64-v8a"]
+    return value ? value.split(",") : ["x86_64", "arm64-v8a"]
 }
 
 android {
     ndkVersion rootProject.ext.ndkVersion
 
     compileSdkVersion rootProject.ext.compileSdkVersion
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    buildFeatures {
+        buildConfig true
+    }
 
     namespace "com.reactnativevideopluginexample"
     defaultConfig {
@@ -100,6 +115,9 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        ndk {
+            abiFilters "arm64-v8a", "x86_64"
+        }
     }
 
     splits {
@@ -116,6 +134,8 @@ android {
             storePassword 'android'
             keyAlias 'androiddebugkey'
             keyPassword 'android'
+            enableV1Signing false
+            enableV2Signing true
         }
     }
     buildTypes {
@@ -130,14 +150,19 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+    packaging {
+        jniLibs {
+            pickFirst '**/*.so'
+        }
+    }
 
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
         variant.outputs.each { output ->
             // For each separate APK per architecture, set a unique version code as described here:
             // https://developer.android.com/studio/build/configure-apk-splits.html
-            // Example: versionCode 1 will generate 1001 for armeabi-v7a, 1002 for x86, etc.
-            def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
+            // Example: versionCode 1 will generate 1003 for arm64-v8a, 1004 for x86_64
+            def versionCodes = ["arm64-v8a": 3, "x86_64": 4]
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
@@ -148,23 +173,37 @@ android {
     }
 }
 
+configurations.all {
+    resolutionStrategy {
+        force "androidx.activity:activity:1.9.3"
+        force "androidx.activity:activity-ktx:1.9.3"
+        force "androidx.core:core:1.15.0"
+        force "androidx.core:core-ktx:1.15.0"
+    }
+}
+
 dependencies {
     // The version of react-native is set by the React Native Gradle Plugin
     implementation("com.facebook.react:react-android")
 
-    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.0.0")
+    implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+    implementation("androidx.activity:activity:1.9.3")
+    implementation("androidx.activity:activity-ktx:1.9.3")
+    implementation("androidx.core:core:1.15.0")
+    implementation("androidx.core:core-ktx:1.15.0")
 
-    debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}")
-    debugImplementation("com.facebook.flipper:flipper-network-plugin:${FLIPPER_VERSION}") {
-        exclude group:'com.squareup.okhttp3', module:'okhttp'
+    constraints {
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:2.0.21") {
+            because("kotlin-stdlib-jdk7 is now a part of kotlin-stdlib")
+        }
+        implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.0.21") {
+            because("kotlin-stdlib-jdk8 is now a part of kotlin-stdlib")
+        }
     }
 
-    debugImplementation("com.facebook.flipper:flipper-fresco-plugin:${FLIPPER_VERSION}")
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
     } else {
         implementation jscFlavor
     }
 }
-
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesAppBuildGradle(project)

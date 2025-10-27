@@ -1,6 +1,6 @@
 {
   "name": "@100mslive/react-native-video-plugin",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "HMSSDK now provides support for Virtual Background using @100mslive/react-native-video-plugin. It allows users to change their background during a call. Users can choose from a variety of backgrounds or upload their own custom background. It also provides a feature to blur the background.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -114,7 +114,7 @@
     "type": "git",
     "url": "git+https://github.com/100mslive/react-native-video-plugin.git"
   },
-  "author": "Jatin Nagar <jatin.nagar@100ms.live> (https://www.100ms.live/), Yogesh <yogesh@100ms.live> (https://www.100ms.live/)",
+  "author": "Yogesh Singh (https://www.100ms.live/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/100mslive/react-native-video-plugin/issues"
@@ -124,13 +124,13 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@100mslive/react-native-hms": "^1.10.9",
+    "@100mslive/react-native-hms": "1.12.0",
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.5.0",
-    "@react-native/babel-preset": "^0.73.1",
-    "@react-native/eslint-config": "^0.73.1",
+    "@react-native/babel-preset": "0.78.1",
+    "@react-native/eslint-config": "0.78.1",
     "@types/jest": "^29.5.5",
-    "@types/react": "^18.2.44",
+    "@types/react": "^19.0.6",
     "commitlint": "^17.0.2",
     "del-cli": "^5.1.0",
     "eslint": "^8.51.0",
@@ -138,25 +138,25 @@
     "eslint-plugin-prettier": "^5.0.1",
     "jest": "^29.7.0",
     "prettier": "^3.0.3",
-    "react": "18.2.0",
-    "react-native": "0.71.19",
+    "react": "19.0.0",
+    "react-native": "0.78.1",
     "react-native-builder-bob": "^0.20.0",
     "turbo": "^1.10.7",
-    "typescript": "^5.2.2"
+    "typescript": "^5.7.3"
   },
   "resolutions": {
-    "@types/react": "^18.2.44",
-    "image-size": "2.0.2"
+    "@types/react": "^19.0.6",
+    "image-size": "1.1.1"
   },
   "peerDependencies": {
-    "@100mslive/react-native-hms": "^1.10.9",
+    "@100mslive/react-native-hms": "1.12.0",
     "react": "*",
     "react-native": "*"
   },
   "workspaces": [
     "example"
   ],
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@4.10.3",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [

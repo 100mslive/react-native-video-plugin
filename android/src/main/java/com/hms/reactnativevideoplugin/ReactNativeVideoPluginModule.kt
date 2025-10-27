@@ -71,7 +71,7 @@ class ReactNativeVideoPluginModule(reactContext: ReactApplicationContext) :
         }
         try {
           val bitmap: Bitmap? =
-            if (bgImageUri.startsWith("http://")) {
+            if (bgImageUri.startsWith("http://") || bgImageUri.startsWith("https://")) {
               val url = URL(bgImageUri)
               BitmapFactory.decodeStream(url.openConnection().getInputStream())
             } else if (bgImageUri.startsWith("file://")) {
