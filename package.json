@@ -124,7 +124,7 @@
     "registry": "https://registry.npmjs.org/"
   },
   "devDependencies": {
-    "@100mslive/react-native-hms": "portal:/Users/yogesh/Programming/100ms-react-native/packages/react-native-hms",
+    "@100mslive/react-native-hms": "1.12.0",
     "@commitlint/config-conventional": "^17.0.2",
     "@evilmartians/lefthook": "^1.5.0",
     "@react-native/babel-preset": "0.78.1",
@@ -149,7 +149,7 @@
     "image-size": "1.1.1"
   },
   "peerDependencies": {
-    "@100mslive/react-native-hms": "^1.12.0",
+    "@100mslive/react-native-hms": "1.12.0",
     "react": "*",
     "react-native": "*"
   },
