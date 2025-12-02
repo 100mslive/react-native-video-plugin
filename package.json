@@ -146,7 +146,7 @@
   },
   "resolutions": {
     "@types/react": "^19.0.6",
-    "image-size": "1.1.1"
+    "image-size": "2.0.2"
   },
   "peerDependencies": {
     "@100mslive/react-native-hms": "1.12.0",
