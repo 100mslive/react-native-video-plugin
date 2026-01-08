@@ -12,7 +12,7 @@ const reactPath = path.join(__dirname, 'node_modules', 'react');
 const reactNativePath = path.join(__dirname, 'node_modules', 'react-native');
 
 // Add external workspace directory for portal dependencies
-const externalWorkspace = path.resolve(__dirname, '../../../Programming/100ms-react-native');
+// const externalWorkspace = path.resolve(__dirname, '../../../Programming/100ms-react-native');
 
 /**
  * Metro configuration
@@ -20,8 +20,9 @@ const externalWorkspace = path.resolve(__dirname, '../../../Programming/100ms-re
  *
  * @type {import('metro-config').MetroConfig}
  */
+
 const config = {
-  watchFolders: [root, externalWorkspace],
+  watchFolders: [root],
 
   // We need to make sure that only one version is loaded for peerDependencies
   // So we block them at the root, and alias them to the versions in example's node_modules
@@ -32,7 +33,7 @@ const config = {
         (m) =>
           new RegExp(`^${escape(path.join(root, 'node_modules', m))}\\/.*$`)
       ),
-      // Block all common React Native dependencies from external workspace to prevent duplicate native modules
+      /* Block all common React Native dependencies from external workspace to prevent duplicate native modules -  uncomment thid if you are using a external workspace
       new RegExp(`${escape(externalWorkspace)}\\/.*\\/node_modules\\/react\\/.*`),
       new RegExp(`${escape(externalWorkspace)}\\/.*\\/node_modules\\/react-native\\/.*`),
       new RegExp(`${escape(externalWorkspace)}\\/.*\\/node_modules\\/react-native-safe-area-context\\/.*`),
@@ -48,6 +49,7 @@ const config = {
       new RegExp(`${escape(externalWorkspace)}\\/.*\\/node_modules\\/react-native-simple-toast\\/.*`),
       new RegExp(`${escape(externalWorkspace)}\\/.*\\/node_modules\\/react-native-webview\\/.*`),
       new RegExp(`${escape(externalWorkspace)}\\/.*\\/node_modules\\/@react-navigation\\/.*`),
+      */
     ]),
 
     extraNodeModules: {

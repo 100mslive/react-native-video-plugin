@@ -11,3 +11,26 @@ index 1234567..abcdefg 100644
  const path = require("path");
  function isAssetTypeAnImage(type) {
    return (
+@@ -28,7 +28,8 @@ function getAssetSize(type, content, filePath) {
+   if (content.length === 0) {
+     throw new Error(`Image asset \`${filePath}\` cannot be an empty file.`);
+   }
+-  const { width, height } = getImageSize(content);
++  const contentArray = new Uint8Array(content.buffer, content.byteOffset, content.byteLength);
++  const { width, height } = getImageSize(contentArray);
+   return {
+     width,
+     height,
+@@ -134,10 +135,9 @@ async function getAssetData(
+     assetUrlPath = assetUrlPath.replaceAll("\\", "/");
+   }
+   const isImage = isAssetTypeAnImage(path.extname(assetPath).slice(1));
+   const assetInfo = await getAbsoluteAssetInfo(assetPath, platform);
+-  const isImageInput = assetInfo.files[0].includes(".zip/")
+-    ? fs.readFileSync(assetInfo.files[0])
+-    : assetInfo.files[0];
++  const fileBuffer = fs.readFileSync(assetInfo.files[0]);
++  const isImageInput = new Uint8Array(fileBuffer.buffer, fileBuffer.byteOffset, fileBuffer.byteLength);
+   const dimensions = isImage ? getImageSize(isImageInput) : null;
+   const scale = assetInfo.scales[0];
+   const assetData = {
