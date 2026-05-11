@@ -5,15 +5,27 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@100mslive/react-native-hms@npm:1.12.0":
-  version: 1.12.0
-  resolution: "@100mslive/react-native-hms@npm:1.12.0"
+"@100mslive/react-native-hms@file:../../100ms-react-native/packages/react-native-hms::locator=%40100mslive%2Freact-native-video-plugin-example%40workspace%3Aexample":
+  version: 1.12.2
+  resolution: "@100mslive/react-native-hms@file:../../100ms-react-native/packages/react-native-hms#../../100ms-react-native/packages/react-native-hms::hash=3a7792&locator=%40100mslive%2Freact-native-video-plugin-example%40workspace%3Aexample"
   dependencies:
     zustand: "npm:^4.3.8"
   peerDependencies:
     react: "*"
     react-native: ">=0.77.3"
-  checksum: 10c0/ca29858b6eae525eda374be54b3e5cce969b2f83498679b69419bb9e91347489f6dacea80914677d60670ce76d39bb507fdbb51dbe8be794f0b1a488d5310bd2
+  checksum: 10c0/aeb1fa886e05dd18ebd44ef8e1e1dda44ddab087fb82aa8c775148143605110dd4792c4e12930b72f640c1032b40c93a395a0a5498ffc4e21ead0a074e4c986b
+  languageName: node
+  linkType: hard
+
+"@100mslive/react-native-hms@npm:>=1.12.0 <2.0.0":
+  version: 1.12.1
+  resolution: "@100mslive/react-native-hms@npm:1.12.1"
+  dependencies:
+    zustand: "npm:^4.3.8"
+  peerDependencies:
+    react: "*"
+    react-native: ">=0.77.3"
+  checksum: 10c0/fa9dfb26f4942d79553647210c66ac850c9a416e2a636f395a3a3725f64a312919d3fa77252446263d81e4a7d2f637892bc276c51083ee949e373e5026c369cd
   languageName: node
   linkType: hard
 
@@ -48,7 +60,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@100mslive/react-native-video-plugin-example@workspace:example"
   dependencies:
-    "@100mslive/react-native-hms": "npm:1.12.0"
+    "@100mslive/react-native-hms": "file:../../100ms-react-native/packages/react-native-hms"
     "@100mslive/react-native-room-kit": "npm:1.2.3"
     "@100mslive/react-native-video-plugin": "workspace:^"
     "@100mslive/types-prebuilt": "npm:0.12.12"
@@ -97,7 +109,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@100mslive/react-native-video-plugin@workspace:."
   dependencies:
-    "@100mslive/react-native-hms": "npm:1.12.0"
+    "@100mslive/react-native-hms": "npm:>=1.12.0 <2.0.0"
     "@commitlint/config-conventional": "npm:^17.0.2"
     "@evilmartians/lefthook": "npm:^1.5.0"
     "@react-native/babel-preset": "npm:0.78.1"
@@ -117,7 +129,7 @@ __metadata:
     turbo: "npm:^1.10.7"
     typescript: "npm:^5.7.3"
   peerDependencies:
-    "@100mslive/react-native-hms": 1.12.0
+    "@100mslive/react-native-hms": ">=1.12.0 <2.0.0"
     react: "*"
     react-native: "*"
   languageName: unknown

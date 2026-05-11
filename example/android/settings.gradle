@@ -15,5 +15,12 @@ extensions.configure(com.facebook.react.ReactSettingsExtension){ ex ->
     ex.autolinkLibrariesFromCommand()
 }
 
+// Expose @react-native/gradle-plugin to regular Gradle dependency resolution
+// (in addition to plugin resolution above) so libraries using legacy
+// `apply plugin: 'com.facebook.react'` can find it on the root buildscript
+// classpath. Required for new-arch builds with transitive libs like
+// lottie-react-native that conditionally use legacy plugin syntax.
+includeBuild("../node_modules/@react-native/gradle-plugin")
+
 rootProject.name = 'ReactNativeVideoPluginExample'
 include ':app'
