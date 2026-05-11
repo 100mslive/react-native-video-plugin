@@ -1,32 +1,25 @@
 import groovy.json.JsonSlurper
 
-def sdkVersions = new JsonSlurper().parse file("../sdk-versions.json")
-
-buildscript {
-  // Buildscript is evaluated before everything else so we can't use getExtOrDefault
-  def kotlin_version = rootProject.ext.has("kotlinVersion") ? rootProject.ext.get("kotlinVersion") : project.properties["ReactNativeVideoPlugin_kotlinVersion"]
-
-  repositories {
-    google()
-    mavenCentral()
-  }
-
-  dependencies {
-    classpath "com.android.tools.build:gradle:8.7.2"
-    // noinspection DifferentKotlinGradleVersion
-    classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-  }
+// Use the `plugins {}` DSL block so the React Native gradle plugin resolves
+// in both legacy consumers (root buildscript classpath) AND modern RN 0.71+
+// consumers (pluginManagement.includeBuild in settings.gradle). The legacy
+// `apply plugin: 'com.facebook.react'` form only works against legacy classpath
+// setups, breaking vanilla RN 0.71+ templates.
+//
+// Plugins (AGP, Kotlin, com.facebook.react) are inherited from the consumer
+// app's classpath — declaring our own `buildscript {}` block creates a parallel
+// classloader hierarchy and triggers a "privateReact extension already
+// registered" error when both this lib and a sibling lib apply the React plugin.
+plugins {
+  id "com.android.library"
+  id "kotlin-android"
+  id "com.facebook.react"
 }
+
+def sdkVersions = new JsonSlurper().parse file("../sdk-versions.json")
 
 def isNewArchitectureEnabled() {
   return rootProject.hasProperty("newArchEnabled") && rootProject.getProperty("newArchEnabled") == "true"
-}
-
-apply plugin: "com.android.library"
-apply plugin: "kotlin-android"
-
-if (isNewArchitectureEnabled()) {
-  apply plugin: "com.facebook.react"
 }
 
 def getExtOrDefault(name) {
@@ -57,6 +50,16 @@ android {
     }
   }
 
+  sourceSets {
+    main {
+      if (isNewArchitectureEnabled()) {
+        java.srcDirs += ['src/newarch']
+      } else {
+        java.srcDirs += ['src/oldarch']
+      }
+    }
+  }
+
   compileSdkVersion getExtOrIntegerDefault("compileSdkVersion")
 
   defaultConfig {
@@ -79,6 +82,12 @@ android {
     sourceCompatibility JavaVersion.VERSION_17
     targetCompatibility JavaVersion.VERSION_17
   }
+}
+
+react {
+  jsRootDir = file("../src/specs/")
+  libraryName = "RNVideoPluginSpec"
+  codegenJavaPackageName = "com.hms.reactnativevideoplugin"
 }
 
 repositories {

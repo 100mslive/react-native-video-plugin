@@ -5,21 +5,19 @@ import android.graphics.BitmapFactory
 import android.net.Uri
 import com.facebook.react.bridge.Promise
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.bridge.ReactContextBaseJavaModule
-import com.facebook.react.bridge.ReactMethod
 import com.facebook.react.bridge.ReadableMap
-import com.reactnativehmssdk.HMSManager
+import com.reactnativehmssdk.HMSManagerImpl
 import com.reactnativehmssdk.HMSRNSDK
 import live.hms.video.error.HMSException
 import live.hms.video.sdk.HMSActionResultListener
 import live.hms.video.virtualbackground.HMSVirtualBackground
 import java.net.URL
 
-class ReactNativeVideoPluginModule(reactContext: ReactApplicationContext) :
-  ReactContextBaseJavaModule(reactContext) {
+class ReactNativeVideoPluginModuleImpl(
+  private val reactApplicationContext: ReactApplicationContext,
+) {
   private var virtualBackgroundPlugin: HMSVirtualBackground? = null
 
-  @ReactMethod
   fun changeVirtualBackground(
     data: ReadableMap,
     promise: Promise?,
@@ -101,7 +99,6 @@ class ReactNativeVideoPluginModule(reactContext: ReactApplicationContext) :
     }
   }
 
-  @ReactMethod
   fun disableVideoPlugin(
     data: ReadableMap,
     promise: Promise?,
@@ -128,7 +125,7 @@ class ReactNativeVideoPluginModule(reactContext: ReactApplicationContext) :
     }
     when (pluginType) {
       "HMSVirtualBackgroundPlugin" -> {
-        val moduleInstance = this
+        val implInstance = this
         hmsSDK.removePlugin(
           virtualBackgroundPlugin,
           object : HMSActionResultListener {
@@ -138,7 +135,7 @@ class ReactNativeVideoPluginModule(reactContext: ReactApplicationContext) :
 
             override fun onSuccess() {
               promise?.resolve(true)
-              moduleInstance.virtualBackgroundPlugin = null
+              implInstance.virtualBackgroundPlugin = null
             }
           },
         )
@@ -149,7 +146,6 @@ class ReactNativeVideoPluginModule(reactContext: ReactApplicationContext) :
     }
   }
 
-  @ReactMethod
   fun enableVideoPlugin(
     data: ReadableMap,
     promise: Promise?,
@@ -183,15 +179,11 @@ class ReactNativeVideoPluginModule(reactContext: ReactApplicationContext) :
     }
   }
 
-  override fun getName(): String {
-    return NAME
-  }
-
   private fun getHmsRNSdk(data: ReadableMap): HMSRNSDK? {
     val id = data.getString("id")
 
     return if (id != null) {
-      HMSManager.hmsCollection[id]
+      HMSManagerImpl.hmsCollection[id]
     } else {
       null
     }
