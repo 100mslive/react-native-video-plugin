@@ -14,7 +14,7 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@100mslive/react-native-hms": "file:../../100ms-react-native/packages/react-native-hms",
+    "@100mslive/react-native-hms": "^2.0.0-alpha.1",
     "@100mslive/react-native-room-kit": "1.2.3",
     "@100mslive/react-native-video-plugin": "workspace:^",
     "@100mslive/types-prebuilt": "0.12.12",
