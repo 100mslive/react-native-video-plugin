@@ -1,4 +1,5 @@
-import { NativeModules, Platform } from 'react-native';
+import { Platform, TurboModuleRegistry } from 'react-native';
+import type { Spec } from '../specs/NativeReactNativeVideoPlugin';
 
 const LINKING_ERROR =
   `The package '@100mslive/react-native-video-plugin' doesn't seem to be linked. Make sure: \n\n` +
@@ -12,7 +13,8 @@ const IOS_PLATFORM_ERROR =
   'Platform.OS === "android" ? ReactNativeVideoPlugin.nativeModule : null\n' +
   '```';
 
-const ReactNativeVideoPluginModule = NativeModules.ReactNativeVideoPlugin;
+const ReactNativeVideoPluginModule =
+  TurboModuleRegistry.get<Spec>('ReactNativeVideoPlugin');
 
 export const ReactNativeVideoPlugin = {
   get nativeModule() {

@@ -1,16 +1,35 @@
 package com.hms.reactnativevideoplugin
 
-import com.facebook.react.ReactPackage
+import com.facebook.react.BaseReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
-import com.facebook.react.uimanager.ViewManager
+import com.facebook.react.module.model.ReactModuleInfo
+import com.facebook.react.module.model.ReactModuleInfoProvider
 
-class ReactNativeVideoPluginPackage : ReactPackage {
-  override fun createNativeModules(reactContext: ReactApplicationContext): List<NativeModule> {
-    return listOf(ReactNativeVideoPluginModule(reactContext))
-  }
+class ReactNativeVideoPluginPackage : BaseReactPackage() {
+  override fun getModule(
+    name: String,
+    reactContext: ReactApplicationContext,
+  ): NativeModule? =
+    if (name == ReactNativeVideoPluginModuleImpl.NAME) {
+      ReactNativeVideoPluginModule(reactContext)
+    } else {
+      null
+    }
 
-  override fun createViewManagers(reactContext: ReactApplicationContext): List<ViewManager<*, *>> {
-    return emptyList()
-  }
+  override fun getReactModuleInfoProvider(): ReactModuleInfoProvider =
+    ReactModuleInfoProvider {
+      mapOf(
+        ReactNativeVideoPluginModuleImpl.NAME to
+          ReactModuleInfo(
+            ReactNativeVideoPluginModuleImpl.NAME,
+            ReactNativeVideoPluginModuleImpl.NAME,
+            false, // canOverrideExistingModule
+            false, // needsEagerInit
+            false, // hasConstants
+            false, // isCxxModule
+            true,  // isTurboModule
+          ),
+      )
+    }
 }

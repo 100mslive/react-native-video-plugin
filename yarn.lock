@@ -5,15 +5,15 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@100mslive/react-native-hms@npm:1.12.0":
-  version: 1.12.0
-  resolution: "@100mslive/react-native-hms@npm:1.12.0"
+"@100mslive/react-native-hms@npm:^2.0.0-alpha.1":
+  version: 2.0.0-alpha.1
+  resolution: "@100mslive/react-native-hms@npm:2.0.0-alpha.1"
   dependencies:
     zustand: "npm:^4.3.8"
   peerDependencies:
     react: "*"
     react-native: ">=0.77.3"
-  checksum: 10c0/ca29858b6eae525eda374be54b3e5cce969b2f83498679b69419bb9e91347489f6dacea80914677d60670ce76d39bb507fdbb51dbe8be794f0b1a488d5310bd2
+  checksum: 10c0/c4dd2112bb9b9fc791482f986b39da4b25931b314ca6a212fac54ec2d46d16e632305399ca7b07b570dc421b97965667a6fb8400636f433f342e2ff908497939
   languageName: node
   linkType: hard
 
@@ -48,7 +48,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@100mslive/react-native-video-plugin-example@workspace:example"
   dependencies:
-    "@100mslive/react-native-hms": "npm:1.12.0"
+    "@100mslive/react-native-hms": "npm:^2.0.0-alpha.1"
     "@100mslive/react-native-room-kit": "npm:1.2.3"
     "@100mslive/react-native-video-plugin": "workspace:^"
     "@100mslive/types-prebuilt": "npm:0.12.12"
@@ -97,7 +97,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@100mslive/react-native-video-plugin@workspace:."
   dependencies:
-    "@100mslive/react-native-hms": "npm:1.12.0"
+    "@100mslive/react-native-hms": "npm:^2.0.0-alpha.1"
     "@commitlint/config-conventional": "npm:^17.0.2"
     "@evilmartians/lefthook": "npm:^1.5.0"
     "@react-native/babel-preset": "npm:0.78.1"
@@ -117,7 +117,7 @@ __metadata:
     turbo: "npm:^1.10.7"
     typescript: "npm:^5.7.3"
   peerDependencies:
-    "@100mslive/react-native-hms": 1.12.0
+    "@100mslive/react-native-hms": ^2.0.0-alpha.1
     react: "*"
     react-native: "*"
   languageName: unknown
