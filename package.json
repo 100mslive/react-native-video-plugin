@@ -155,7 +155,8 @@
     "minimatch": "^10.2.3",
     "js-yaml": "^4.1.1",
     "lodash": "^4.18.0",
-    "flatted": "^3.4.2"
+    "flatted": "^3.4.2",
+    "socks": "^2.8.9"
   },
   "peerDependencies": {
     "@100mslive/react-native-hms": "^2.0.0-alpha.1",
