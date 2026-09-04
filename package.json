@@ -147,7 +147,6 @@
   "//resolutions": "Security overrides for dependabot alerts. Scoped descriptors (e.g. 'yaml@^2.2.1') only bump the vulnerable range and leave unaffected majors alone — e.g. yaml@^1.10.0 stays on 1.x, since the yaml advisory (GHSA-48c2-rrv3-qjmp) only affects >= 2.0.0.",
   "resolutions": {
     "@types/react": "^19.0.6",
-    "image-size": "2.0.2",
     "blob": "10.5.0",
     "node-forge": "^1.4.0",
     "fast-xml-parser": "^5.7.0",
