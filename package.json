@@ -145,9 +145,9 @@
     "typescript": "^5.7.3"
   },
   "//resolutions": "Security overrides for dependabot alerts. Scoped descriptors (e.g. 'yaml@^2.2.1') only bump the vulnerable range and leave unaffected majors alone — e.g. yaml@^1.10.0 stays on 1.x, since the yaml advisory (GHSA-48c2-rrv3-qjmp) only affects >= 2.0.0.",
+  "//image-size": "Deliberately NOT pinned. metro requires image-size ^1.0.2 and calls it as `const getImageSize = require('image-size')` (metro/src/Assets.js), which needs v1's callable CommonJS export. v2 is ESM-first: require() returns an object with a named `imageSize` export, so pinning 2.x raises 'TypeError: getImageSize is not a function' on any bundle containing a PNG/JPEG asset. A 2.0.2 pin was added in #11 to patch GHSA-m5qc-5hw7-8vg7, which was correct at the time, but 1.2.1 patches that same advisory on the 1.x line and stays inside metro's major. The remaining advisories GHSA-w3rx-r6r6-pgpr and GHSA-5p2g-fcmc-qvqq cover <= 2.0.2 with no patched release, so no pin can fix them and 1.2.1 is no worse than 2.0.2. Leave this unpinned until upstream ships a fix metro can consume.",
   "resolutions": {
     "@types/react": "^19.0.6",
-    "image-size": "2.0.2",
     "blob": "10.5.0",
     "node-forge": "^1.4.0",
     "fast-xml-parser": "^5.7.0",
